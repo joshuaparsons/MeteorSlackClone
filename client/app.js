@@ -15,7 +15,8 @@ Template.registerHelper("timestampToTime", function (timestamp) {
 	var hours = date.getHours();
 	var minutes = "0" + date.getMinutes();
 	var seconds = "0" + date.getSeconds();
-	return hours + ':' + minutes.substr(minutes.length-2) + ':' + seconds.substr(seconds.length-2);
+	var milliseconds = "0" + date.getMilliseconds();
+	return hours + ':' + minutes.substr(minutes.length-2) + ':' + seconds.substr(seconds.length-2); + milliseconds.substr(milliseconds.length-2)
 });
 
 Template.registerHelper("usernameFromId", function (userId) {

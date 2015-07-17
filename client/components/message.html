@@ -5,7 +5,9 @@
 <!-- Josh: Creates posts into hyperlinks. When the user clicks on a post, it goes to an invisible 
      channel that only shows comments. The name of the channel will be set to the username by
      using the usernameFromId template in app.js.-->
-		<a href="/channel/{{ usernameFromId user }}" class="message_username">{{usernameFromId user}}</a>
+		<!--<a href="/channel/{{ usernameFromId user }}" class="message_username">{{usernameFromId user}}</a>-->
+
+		<a href="/channel/{{ timestampToTime timestamp }}" class="message_username">{{usernameFromId user}}</a>
 
 		<span class="message_timestamp">{{timestampToTime timestamp}}</span>
 		<span class="message_star"></span>
