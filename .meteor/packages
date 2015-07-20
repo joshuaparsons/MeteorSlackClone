@@ -13,3 +13,5 @@ accounts-ui
 accounts-github
 email
 iron:router
+accounts-facebook
+accounts-google

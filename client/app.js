@@ -10,13 +10,15 @@ Template.registerHelper('currentChannel', function () {
 	return Session.get('channel');
 });
 
+
+// Josh: added millisends to timestampToTime function to use timestamps to define comment channels
 Template.registerHelper("timestampToTime", function (timestamp) {
 	var date = new Date(timestamp);
 	var hours = date.getHours();
 	var minutes = "0" + date.getMinutes();
 	var seconds = "0" + date.getSeconds();
 	var milliseconds = "0" + date.getMilliseconds();
-	return hours + ':' + minutes.substr(minutes.length-2) + ':' + seconds.substr(seconds.length-2); + milliseconds.substr(milliseconds.length-2)
+	return hours + ':' + minutes.substr(minutes.length-2) + ':' + seconds.substr(seconds.length-2) + ':' + milliseconds.substr(milliseconds.length-2);
 });
 
 Template.registerHelper("usernameFromId", function (userId) {

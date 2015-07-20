@@ -1,7 +1,8 @@
 <template name="app">
 	{{> header}}
 	<div class="main">
-		{{> loginButtons}}
+	<!-- Josh: align the login widget to the left-->
+		{{> loginButtons align="left"}}
 		{{> listings}}
 		{{> yield}}
 	</div>

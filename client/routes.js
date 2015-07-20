@@ -2,16 +2,12 @@ Router.configure({
   layoutTemplate: 'app'
 });
 
-// Josh:
 //Router.route('/post/:post', function() {
 //	Session.set('post', this.params.post);
 //	this.render('comments');
 //});
 
-Router.route('/post/:post', function() {
-	Session.set('post', this.params.post);
-	this.render('comments');
-});
+// if (Session.get('currentChannel') !== 'Wellness') {
 
 Router.route('/channel/:channel', function () {
 	Session.set('channel', this.params.channel);
